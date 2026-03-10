@@ -24,6 +24,8 @@ namespace BankAccountNS
         }
         public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";
         public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
+        public const string CreditAmountLessThanZeroMessage = "Credit amount is less than zero";
+
         /// <summary>
         /// Возвращает имя владельца счета.
         /// </summary>
@@ -64,8 +66,6 @@ namespace BankAccountNS
         /// <exception cref="ArgumentOutOfRangeException">
         /// Возникает если сумма меньше нуля.
         /// </exception>
-        public const string CreditAmountLessThanZeroMessage = "Credit amount is less than zero";
-
         public void Credit(double amount)
         {
             if (amount < 0)
